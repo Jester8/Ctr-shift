@@ -16,8 +16,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["Archivo", "sans-serif"],
-        body: ["Archivo", "sans-serif"],
+        heading: ["var(--font-orbitron)", "sans-serif"], 
+        body: ["var(--font-exo2)", "sans-serif"],        
       },
     },
   },

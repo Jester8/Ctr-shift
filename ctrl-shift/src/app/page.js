@@ -5,7 +5,9 @@ import { useState } from "react";
 import { Orbitron } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import robotImg from "../../public/assets/img/robot.png";
-
+import SpeakerSlide from "./components/Speakerslide";
+import Event from "./components/Event";
+import ScrollToTop from "./components/ScrollToTop";
 // Load Orbitron font
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -138,6 +140,13 @@ export default function Home() {
           animation: shine 2s infinite linear;
         }
       `}</style>
+
+      {/* SPEAKER SLIDE */}
+      <SpeakerSlide />
+      {/* EVENT SECTION */}
+      <Event />
+      {/* SCROLL TO TOP BUTTON */}
+      <ScrollToTop />
     </div>
   );
 }
