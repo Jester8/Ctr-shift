@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Archivo } from "next/font/google";
+import { Orbitron } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import robotImg from "../../public/assets/img/robot.png";
 
-// Load Archivo font
-const archivo = Archivo({
+// Load Orbitron font
+const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-archivo",
+  variable: "--font-orbitron",
 });
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br from-purple-800 via-black to-mint-400 text-white relative overflow-hidden ${archivo.variable} font-sans`}
+      className={`min-h-screen bg-gradient-to-br from-purple-800 via-black to-mint-400 text-white relative overflow-hidden ${orbitron.variable} font-sans`}
     >
       {/* Glow Background */}
       <div className="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] bg-purple-500/40 rounded-full blur-3xl"></div>
@@ -96,7 +96,7 @@ export default function Home() {
             SHIFT Culture for <span className="text-mint-300">His Kingdom</span>
           </h1>
           <p className="text-purple-200 mb-6">
-            CTRL+SHIFT is not just another conference—it’s a divine command for
+            CTRL+SHIFT is not just another conference, it’s a divine command for
             a generation to surrender to God’s control and transform systems for
             His Kingdom.
           </p>
