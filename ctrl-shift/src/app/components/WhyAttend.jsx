@@ -34,9 +34,9 @@ export default function WhyAttend() {
         <h2 className="text-4xl md:text-6xl font-bold uppercase mb-6 md:mb-0">
           Why Attend?
         </h2>
-        <p className="text-gray-300 max-w-md text-base md:text-lg">
+        {/* <p className="text-gray-300 max-w-md text-base md:text-lg">
           Explore how faith, innovation, and creativity collide at the intersection of tech and media. Join a movement of believers reshaping culture.
-        </p>
+        </p> */}
       </div>
 
       {/* Flipping Cards */}
