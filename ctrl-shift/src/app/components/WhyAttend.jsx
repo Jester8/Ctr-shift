@@ -77,9 +77,9 @@ export default function WhyAttend() {
                 style={{ transform: "rotateY(180deg)" }}
               >
                 <h3 className="text-lg font-bold uppercase mb-4">{item.title}</h3>
-                <p className="text-sm">
+                {/* <p className="text-sm">
                   Join believers redefining excellence in tech, design, and content creation—all rooted in Kingdom values.
-                </p>
+                </p> */}
               </motion.div>
             </motion.div>
           );
