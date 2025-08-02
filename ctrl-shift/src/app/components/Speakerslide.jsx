@@ -2,28 +2,34 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import robotImg from "../../../public/assets/img/robot.png";
+
+import gasieImg from "../../../public/assets/img/gaise.jpg";
+import foyImg from "../../../public/assets/img/drfoy.jpg";
+import godswillImg from "../../../public/assets/img/godswill.jpg";
+import jaymikeeImg from "../../../public/assets/img/jaymikee.jpg";
+import Chineye from "../../../public/assets/img/chinenye.jpg";
+import Iyinoluwa from "../../../public/assets/img/Iyinoluwa.jpeg";
 
 export default function SpeakerSlide() {
-  // Card data
+  // Card data with updated agenda text
   const cards = [
     {
-      title: "Speakers",
-      text: "Hear from global AI leaders, researchers, and entrepreneurs who are defining the future of artificial intelligence.",
+      title: "Keynote Speakers",
+      text: "Be inspired by powerful sessions from Gaise Baba, Dr Foy, Pastor Godswill, Jay Mikee, Chineye, and Iyinoluwa as they share insights on creativity, faith, and purpose.",
       color: "bg-purple-600 text-white",
       textColor: "text-purple-100",
-      avatars: [robotImg, robotImg, robotImg],
+      avatars: [gasieImg, foyImg, godswillImg, jaymikeeImg, Chineye, Iyinoluwa],
     },
     {
-      title: "Technologies",
-      text: "Explore advanced machine learning, natural language processing, AI-driven automation, and emerging cybersecurity applications.",
+      title: "Workshops & Panels",
+      text: "Engage in interactive discussions and practical workshops covering music ministry, media innovation, leadership, and spiritual growth.",
       color: "bg-gray-100 text-black",
       textColor: "text-black-100",
       avatars: [],
     },
     {
-      title: "Networking Opportunities",
-      text: "Enjoy exclusive networking sessions, roundtables, and social events to foster collaboration and spark new partnerships.",
+      title: "Networking & Collaborations",
+      text: "Connect with fellow creatives, industry leaders, and visionaries to explore collaborations that can impact communities and inspire change.",
       color: "bg-purple-600 text-white",
       textColor: "text-white",
       avatars: [],
@@ -51,7 +57,7 @@ export default function SpeakerSlide() {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }} // triggers when 20% is visible
+            viewport={{ once: false, amount: 0.2 }}
             whileHover={{
               scale: 1.05,
               boxShadow: "0 12px 25px rgba(0,0,0,0.25)",
@@ -63,7 +69,7 @@ export default function SpeakerSlide() {
               <p className={`text-sm ${card.textColor} mb-4`}>{card.text}</p>
               {idx === 0 && (
                 <button className="mt-4 flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500 hover:bg-purple-400 transition text-white font-semibold text-xs">
-                  And more →
+                  View Full Agenda →
                 </button>
               )}
             </div>

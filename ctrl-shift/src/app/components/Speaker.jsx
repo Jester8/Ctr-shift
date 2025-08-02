@@ -75,10 +75,9 @@ export default function Speakers() {
     const autoScroll = () => {
       if (scrollContainer && !isUserInteracting) {
         scrollContainer.scrollLeft += scrollSpeed;
-        if (
-          scrollContainer.scrollLeft >=
-          scrollContainer.scrollWidth - scrollContainer.clientWidth
-        ) {
+
+        // Loop back smoothly when halfway through
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
           scrollContainer.scrollLeft = 0;
         }
       }
@@ -117,12 +116,12 @@ export default function Speakers() {
         </h2>
       </div>
 
-      {/* Scrolling Speaker Cards */}
+      {/* Infinite Scrolling Speaker Cards */}
       <div
         className="flex space-x-6 overflow-x-auto no-scrollbar"
         ref={scrollRef}
       >
-        {speakers.map((speaker, idx) => (
+        {[...speakers, ...speakers].map((speaker, idx) => (
           <div
             key={idx}
             className="min-w-[250px] sm:min-w-[280px] md:min-w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-purple-700 to-green-500"
