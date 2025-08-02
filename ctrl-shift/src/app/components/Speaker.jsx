@@ -7,6 +7,8 @@ import gasieImg from "../../../public/assets/img/gaise.jpg";
 import foyImg from "../../../public/assets/img/drfoy.jpg";
 import godswillImg from "../../../public/assets/img/godswill.jpg";
 import jaymikeeImg from "../../../public/assets/img/jaymikee.jpg";
+import Chineye from "../../../public/assets/img/chinenye.jpg";
+import Iyinoluwa from "../../../public/assets/img/Iyinoluwa.jpeg";
 
 export default function Speakers() {
   const speakers = [
@@ -30,28 +32,35 @@ export default function Speakers() {
       role: "Creative Director, Gospel Artist",
       img: jaymikeeImg,
     },
-    // Duplicate entries to ensure smooth infinite loop
     {
-      name: "Gaise baba",
+      name: "Chineye",
       role: "Gospel Artist & Creative",
-      img: gasieImg,
+      img: Chineye,
     },
     {
-      name: "Dr Foy",
+      name: "Iyinoluwa",
       role: "Media Mogul",
-      img: foyImg,
+      img: Iyinoluwa,
     },
-
-     {
+    {
       name: "Jay Mikee",
       role: "Creative Director, Gospel Artist",
       img: jaymikeeImg,
     },
-
-     {
+    {
       name: "Pastor Godswill",
       role: "Worship Minister & Financial Coach",
       img: godswillImg,
+    },
+    {
+      name: "Chineye",
+      role: "Founder, VHA",
+      img: Chineye,
+    },
+    {
+      name: "Iyinoluwa",
+      role: "CEO, General Partner, Future Africa",
+      img: Iyinoluwa,
     },
   ];
 
@@ -61,9 +70,10 @@ export default function Speakers() {
     const scrollContainer = scrollRef.current;
     let animationFrameId;
     let scrollSpeed = 0.5;
+    let isUserInteracting = false;
 
     const autoScroll = () => {
-      if (scrollContainer) {
+      if (scrollContainer && !isUserInteracting) {
         scrollContainer.scrollLeft += scrollSpeed;
         if (
           scrollContainer.scrollLeft >=
@@ -75,9 +85,27 @@ export default function Speakers() {
       animationFrameId = requestAnimationFrame(autoScroll);
     };
 
+    const handleTouchStart = () => {
+      isUserInteracting = true;
+    };
+    const handleTouchEnd = () => {
+      isUserInteracting = false;
+    };
+
+    if (scrollContainer) {
+      scrollContainer.addEventListener("touchstart", handleTouchStart, { passive: true });
+      scrollContainer.addEventListener("touchend", handleTouchEnd, { passive: true });
+    }
+
     animationFrameId = requestAnimationFrame(autoScroll);
 
-    return () => cancelAnimationFrame(animationFrameId);
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener("touchstart", handleTouchStart);
+        scrollContainer.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
   }, []);
 
   return (
@@ -87,7 +115,6 @@ export default function Speakers() {
         <h2 className="text-4xl md:text-5xl font-bold uppercase leading-tight">
           Keynote <br /> Speakers
         </h2>
-      
       </div>
 
       {/* Scrolling Speaker Cards */}
