@@ -133,10 +133,7 @@ export default function Home() {
             CTRL+SHIFT is more than an event it is a divine movement uniting creatives, tech innovators,
             media disruptors, and spirit-led thinkers.
           </p>
-          <p className="text-purple-200 mb-6 leading-relaxed text-sm md:text-base">
-            Whether you’re into filmmaking, coding, design, songwriting, marketing, or entrepreneurship,
-            CTRL+SHIFT is your home to network, create, worship, and walk boldly in your Kingdom calling.
-          </p>
+         
           <div className="flex justify-center md:justify-start">
             <button className="relative px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow-lg overflow-hidden group">
               <span className="relative z-10">Join the Movement</span>

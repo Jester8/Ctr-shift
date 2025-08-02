@@ -9,6 +9,7 @@ import godswillImg from "../../../public/assets/img/godswill.jpg";
 import jaymikeeImg from "../../../public/assets/img/jaymikee.jpg";
 import Chineye from "../../../public/assets/img/chinenye.jpg";
 import Iyinoluwa from "../../../public/assets/img/Iyinoluwa.jpeg";
+import Mamad from "../../../public/assets/img/mamad.jpg";
 
 export default function Speakers() {
   const speakers = [
@@ -16,6 +17,12 @@ export default function Speakers() {
       name: "Gaise baba",
       role: "Gospel Artist & Creative",
       img: gasieImg,
+    },
+
+    {
+      name: "Pastor Gloria Oyor",
+      role: "Spoken Word Artist & Creative",
+      img: Mamad,
     },
     {
       name: "Dr Foy",
@@ -61,6 +68,11 @@ export default function Speakers() {
       name: "Iyinoluwa",
       role: "CEO, General Partner, Future Africa",
       img: Iyinoluwa,
+    },
+    {
+      name: "Mamad",
+      role: "Spoken Word Artist & Creative",
+      img: Mamad,
     },
   ];
 

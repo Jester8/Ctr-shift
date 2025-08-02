@@ -1,38 +1,27 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
-import gasieImg from "../../../public/assets/img/gaise.jpg";
-import foyImg from "../../../public/assets/img/drfoy.jpg";
-import godswillImg from "../../../public/assets/img/godswill.jpg";
-import jaymikeeImg from "../../../public/assets/img/jaymikee.jpg";
-import Chineye from "../../../public/assets/img/chinenye.jpg";
-import Iyinoluwa from "../../../public/assets/img/Iyinoluwa.jpeg";
-
 export default function SpeakerSlide() {
-  // Card data with updated agenda text
+  // Card data with updated agenda text (avatars removed)
   const cards = [
     {
       title: "Keynote Speakers",
       text: "Be inspired by powerful sessions from Gaise Baba, Dr Foy, Pastor Godswill, Jay Mikee, Chineye, and Iyinoluwa as they share insights on creativity, faith, and purpose.",
       color: "bg-purple-600 text-white",
       textColor: "text-purple-100",
-      avatars: [gasieImg, foyImg, godswillImg, jaymikeeImg, Chineye, Iyinoluwa],
     },
     {
       title: "Workshops & Panels",
       text: "Engage in interactive discussions and practical workshops covering music ministry, media innovation, leadership, and spiritual growth.",
       color: "bg-gray-100 text-black",
       textColor: "text-black-100",
-      avatars: [],
     },
     {
       title: "Networking & Collaborations",
       text: "Connect with fellow creatives, industry leaders, and visionaries to explore collaborations that can impact communities and inspire change.",
       color: "bg-purple-600 text-white",
       textColor: "text-white",
-      avatars: [],
     },
   ];
 
@@ -73,20 +62,6 @@ export default function SpeakerSlide() {
                 </button>
               )}
             </div>
-            {card.avatars.length > 0 && (
-              <div className="flex -space-x-3 mt-4">
-                {card.avatars.map((img, i) => (
-                  <Image
-                    key={i}
-                    src={img}
-                    alt={`Speaker ${i}`}
-                    width={32}
-                    height={32}
-                    className="rounded-full border-2 border-white object-cover"
-                  />
-                ))}
-              </div>
-            )}
           </motion.div>
         ))}
       </div>

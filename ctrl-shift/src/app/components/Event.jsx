@@ -1,31 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import markImg from "../../../public/assets/img/Mark.png";
 
 export default function Event() {
   const events = [
     {
-      day: "Day 1",
-      time: "09:00 – 19:00",
-      title: "AI Innovations & Trends",
+      time: "09:00 – 11:00",
+      title: "Panel Sessions",
       description:
-        "The summit kicks off with a keynote, expert panels, and discussions on AI strategies, ethics, and automation. Hands-on workshops and networking events wrap up the day.",
+        "Engaging conversations with industry leaders, creatives, and innovators discussing creativity, faith, and excellence in their fields.",
     },
     {
-      day: "Day 2",
-      time: "09:00 – 20:00",
-      title: "AI Technologies & Applications",
+      time: "11:30 – 13:30",
+      title: "Brand Promotions & Networking",
       description:
-        "Explore the latest in generative AI, robotics, and NLP, with industry-led discussions and tech demos. A startup showcase and investor insights highlight AI's business potential.",
+        "Explore brand showcases, connect with sponsors, and network with fellow participants for collaboration opportunities.",
     },
     {
-      day: "Day 3",
-      time: "09:30 – 16:00",
-      title: "Future of AI & Networking",
+      time: "14:00 – 16:00",
+      title: "Questions & Answers + Prayers",
       description:
-        "Dive into AI’s future: seminars, global expert workshops, and watch the startup pitch competition. The event ends with a visionary keynote and final networking sessions.",
+        "Interactive Q&A sessions followed by prayer time to seek divine direction, empowerment, and breakthrough.",
+    },
+    {
+      time: "16:30 – 19:00",
+      title: "Impartation & Worship",
+      description:
+        "Powerful impartation session with anointed ministers, ending the day with heartfelt worship and thanksgiving.",
     },
   ];
 
@@ -48,14 +49,14 @@ export default function Event() {
         variants={containerVariants}
       >
         {/* Header */}
-        <div className="mb-10">
-          <h2 className="text-4xl font-bold mb-2">Event-Outline</h2>
+        <div className="mb-10 text-center md:text-left">
+          <h2 className="text-4xl font-bold mb-2">Event Outline</h2>
           <p className="text-sm text-gray-300">
-            October 16–19, 2025 | Horizon Convention Centre, Amsterdam
+            18th October 2025 | Davidic Generation Church, Farayola Layout Bodija, Ibadan
           </p>
         </div>
 
-        {/* Event Items */}
+        {/* Event Sections */}
         <div className="flex flex-col gap-8">
           {events.map((event, idx) => (
             <motion.div
@@ -67,8 +68,7 @@ export default function Event() {
               transition={{ delay: idx * 0.2, duration: 0.6 }}
             >
               <div className="md:w-1/3">
-                <p className="font-semibold text-lg">{event.day}</p>
-                <p className="text-sm text-gray-300">{event.time}</p>
+                <p className="font-semibold text-lg">{event.time}</p>
               </div>
               <div className="md:w-2/3">
                 <p className="font-bold text-lg mb-1">{event.title}</p>
@@ -79,20 +79,13 @@ export default function Event() {
         </div>
 
         {/* Footer Button */}
-        <div className="mt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          {/* <Image
-            src={markImg}
-            alt="Event Logo"
-            width={200}
-            height={100}
-            className="object-contain"
-          /> */}
+        <div className="mt-10 flex justify-center">
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px rgba(168, 85, 247, 0.5)" }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
             className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-purple-300 text-black font-bold shadow-lg"
           >
-            View detailed schedule 
+            View Detailed Schedule
           </motion.button>
         </div>
       </motion.div>
