@@ -8,6 +8,8 @@ import robotImg from "../../public/assets/img/robot.png";
 import SpeakerSlide from "./components/Speakerslide";
 import Event from "./components/Event";
 import ScrollToTop from "./components/ScrollToTop";
+import Speaker from "./components/Speaker";
+
 // Load Orbitron font
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -147,6 +149,8 @@ export default function Home() {
       <Event />
       {/* SCROLL TO TOP BUTTON */}
       <ScrollToTop />
+      {/* SPEAKER SECTION */}
+      <Speaker />
     </div>
   );
 }
