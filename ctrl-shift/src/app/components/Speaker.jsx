@@ -20,7 +20,7 @@ export default function Speakers() {
     },
 
     {
-      name: "Pastor Gloria Oyor",
+      name: "Pastor Darasimi Oyor",
       role: "Spoken Word Artist & Creative",
       img: Mamad,
     },
@@ -30,7 +30,7 @@ export default function Speakers() {
       img: foyImg,
     },
     {
-      name: "Pastor Godswill",
+      name: "Pastor Godswill Oyor",
       role: "Worship Minister & Financial Coach",
       img: godswillImg,
     },
@@ -40,13 +40,13 @@ export default function Speakers() {
       img: jaymikeeImg,
     },
     {
-      name: "Chineye",
-      role: "Gospel Artist & Creative",
+      name: "Chineye Adeleye",
+     role: "Founder, VHA",
       img: Chineye,
     },
     {
-      name: "Iyinoluwa",
-      role: "Media Mogul",
+      name: "Iyinoluwa Aboyeji",
+        role: "CEO, General Partner, Future Africa",
       img: Iyinoluwa,
     },
     {
@@ -55,22 +55,22 @@ export default function Speakers() {
       img: jaymikeeImg,
     },
     {
-      name: "Pastor Godswill",
+      name: "Pastor Godswill Oyor",
       role: "Worship Minister & Financial Coach",
       img: godswillImg,
     },
     {
-      name: "Chineye",
+      name: "Chineye Adeleye",
       role: "Founder, VHA",
       img: Chineye,
     },
     {
-      name: "Iyinoluwa",
+      name: "Iyinoluwa  Aboyeji",
       role: "CEO, General Partner, Future Africa",
       img: Iyinoluwa,
     },
     {
-      name: "Mamad",
+      name: "Pastor Darasimi Oyor",
       role: "Spoken Word Artist & Creative",
       img: Mamad,
     },
