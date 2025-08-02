@@ -12,7 +12,7 @@ export default function Speakers() {
   const speakers = [
     {
       name: "Gaise baba",
-      role: "Gospel Artist & Creattive",
+      role: "Gospel Artist & Creative",
       img: gasieImg,
     },
     {
@@ -33,13 +33,25 @@ export default function Speakers() {
     // Duplicate entries to ensure smooth infinite loop
     {
       name: "Gaise baba",
-      role: "Chief AI Scientist, OpenAI",
+      role: "Gospel Artist & Creative",
       img: gasieImg,
     },
     {
       name: "Dr Foy",
-      role: "CTO, DeepMind",
+      role: "Media Mogul",
       img: foyImg,
+    },
+
+     {
+      name: "Jay Mikee",
+      role: "Creative Director, Gospel Artist",
+      img: jaymikeeImg,
+    },
+
+     {
+      name: "Pastor Godswill",
+      role: "Worship Minister & Financial Coach",
+      img: godswillImg,
     },
   ];
 
