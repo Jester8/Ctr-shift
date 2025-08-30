@@ -27,54 +27,82 @@ export default function Home() {
     <div
       className={`min-h-screen bg-gradient-to-br from-purple-800 via-black to-mint-400 text-white relative overflow-hidden ${orbitron.variable} font-sans`}
     >
-      {/* Glow Background */}
+      {/* Glow Backgrounds */}
       <div className="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] bg-purple-500/40 rounded-full blur-3xl"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-green-300/40 rounded-full blur-3xl"></div>
 
       {/* NAVBAR */}
-    {/* NAVBAR */}
-<nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] rounded-2xl px-6 py-3 flex justify-between items-center backdrop-blur-md bg-white/10 border border-white/20 shadow-lg z-50">
-  
-  {/* Logo on Left */}
-  <div className="flex items-center gap-2">
-    <Image
-      src={Logo}
-      alt="Davidic Generation Church Logo"
-      width={120}
-      height={40}
-      className="object-contain"
-    />
-   
-  </div>
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] rounded-2xl px-6 py-3 flex justify-between items-center backdrop-blur-md bg-white/10 border border-white/20 shadow-lg z-50">
+        {/* Logo on Left */}
+        <div className="flex items-center gap-2">
+          <Image
+            src={Logo}
+            alt="Davidic Generation Church Logo"
+            width={120}
+            height={40}
+            className="object-contain"
+          />
+        </div>
 
-  {/* Menu Links */}
-  <ul className="hidden md:flex gap-6 text-sm font-semibold">
-    <li className="hover:text-mint-300 cursor-pointer transition">Home</li>
-    <li className="hover:text-mint-300 cursor-pointer transition">About</li>
-    <li className="hover:text-mint-300 cursor-pointer transition">Event</li>
-    <li className="hover:text-mint-300 cursor-pointer transition">Contact</li>
-  </ul>
+        {/* Menu Links (Desktop) */}
+        <ul className="hidden md:flex gap-6 text-sm font-semibold">
+          <li>
+            <Link href="#home" className="hover:text-mint-300 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="#about" className="hover:text-mint-300 transition">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="#event" className="hover:text-mint-300 transition">
+              Event
+            </Link>
+          </li>
+          <li>
+            <Link href="#contact" className="hover:text-mint-300 transition">
+              Contact
+            </Link>
+          </li>
+        </ul>
 
-  {/* Register Button */}
-  <button className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow hover:shadow-lg hover:shadow-mint-300/50 transition">
-   <Link href="https://lu.ma/e5dowowo" target="_blank" rel="noopener noreferrer">
-     Register   
-   </Link>
-  
-  </button>
+        {/* Register Button (Desktop) */}
+        <Link
+          href="https://lu.ma/e5dowowo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block"
+        >
+          <button className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow hover:shadow-lg hover:shadow-mint-300/50 transition">
+            Register
+          </button>
+        </Link>
 
-  {/* Mobile Menu Icon */}
-  <div
-    className="md:hidden flex flex-col gap-1 cursor-pointer"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    <motion.span animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 6 : 0 }} className="w-6 h-[2px] bg-white" />
-    <motion.span animate={{ opacity: menuOpen ? 0 : 1 }} className="w-6 h-[2px] bg-white" />
-    <motion.span animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -6 : 0 }} className="w-6 h-[2px] bg-white" />
-  </div>
-</nav>
+        {/* Mobile Menu Icon */}
+        <button
+          className="md:hidden flex flex-col gap-1 cursor-pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-label="Toggle menu"
+        >
+          <motion.span
+            animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 6 : 0 }}
+            className="w-6 h-[2px] bg-white"
+          />
+          <motion.span
+            animate={{ opacity: menuOpen ? 0 : 1 }}
+            className="w-6 h-[2px] bg-white"
+          />
+          <motion.span
+            animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -6 : 0 }}
+            className="w-6 h-[2px] bg-white"
+          />
+        </button>
+      </nav>
 
-
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -84,21 +112,37 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             className="fixed top-20 left-1/2 transform -translate-x-1/2 w-[90%] rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg p-6 flex flex-col gap-4 md:hidden z-40"
           >
-            <a className="hover:text-mint-300 transition">Home</a>
-            <a className="hover:text-mint-300 transition">About</a>
-            <a className="hover:text-mint-300 transition">Event</a>
-            <a className="hover:text-mint-300 transition">Contact</a>
-            <button className="mt-2 px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow hover:shadow-lg hover:shadow-mint-300/50 transition">
-              Register
-            </button>
+            <Link href="#home" className="hover:text-mint-300 transition">
+              Home
+            </Link>
+            <Link href="#about" className="hover:text-mint-300 transition">
+              About
+            </Link>
+            <Link href="#event" className="hover:text-mint-300 transition">
+              Event
+            </Link>
+            <Link href="#contact" className="hover:text-mint-300 transition">
+              Contact
+            </Link>
+            <Link
+              href="https://lu.ma/e5dowowo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="mt-2 px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow hover:shadow-lg hover:shadow-mint-300/50 transition">
+                Register
+              </button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 pt-24 md:pt-40 gap-10 md:gap-16">
-        
-        {/* Text + Logo + Robot on Mobile */}
+      <section
+        id="home"
+        className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 pt-28 sm:pt-32 md:pt-40 gap-10 md:gap-16"
+      >
+        {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,7 +164,8 @@ export default function Home() {
             Gen Z Powered Christian Experience
           </p>
           <h1 className="text-5xl md:text-6xl font-heading font-bold leading-tight mb-6">
-            SHIFT Culture for <span className="text-mint-300">His Kingdom</span>
+            SHIFT Culture for{" "}
+            <span className="text-mint-300">His Kingdom</span>
           </h1>
 
           {/* Robot image (mobile only) */}
@@ -134,16 +179,23 @@ export default function Home() {
           </div>
 
           <p className="text-purple-200 mb-4 leading-relaxed text-sm md:text-base">
-            CTRL+SHIFT is more than an event it is a divine movement uniting creatives, tech innovators,
-            media disruptors, and spirit-led thinkers.
+            CTRL+SHIFT is more than an event it is a divine movement uniting
+            creatives, tech innovators, media disruptors, and spirit-led
+            thinkers.
           </p>
-         
+
           <div className="flex justify-center md:justify-start">
-            <button className="relative px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow-lg overflow-hidden group">
-              <span className="relative z-10">Join the Movement</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -skew-x-12 animate-shine"></span>
-              <span className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent opacity-50 rounded-full"></span>
-            </button>
+            <Link
+              href="https://lu.ma/e5dowowo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="relative px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow-lg overflow-hidden group">
+                <span className="relative z-10">Join the Movement</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -skew-x-12 animate-shine"></span>
+                <span className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent opacity-50 rounded-full"></span>
+              </button>
+            </Link>
           </div>
         </motion.div>
 
@@ -163,6 +215,7 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Shine Animation */}
       <style jsx>{`
         @keyframes shine {
           0% {
@@ -177,6 +230,7 @@ export default function Home() {
         }
       `}</style>
 
+      {/* Sections */}
       <SpeakerSlide />
       <Event />
       <ScrollToTop />
