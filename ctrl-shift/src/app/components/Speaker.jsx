@@ -3,19 +3,19 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-import gasieImg from "../../../public/assets/img/gaise.jpg";
-import foyImg from "../../../public/assets/img/drfoy.jpg";
+import gasieImg from "../../../public/assets/img/Emmanuel.jpeg";
+import foyImg from "../../../public/assets/img/ade.jpeg";
 import godswillImg from "../../../public/assets/img/godswill.jpg";
 import jaymikeeImg from "../../../public/assets/img/jaymikee.jpg";
 import Chineye from "../../../public/assets/img/chinenye.jpg";
-import Iyinoluwa from "../../../public/assets/img/Iyinoluwa.jpeg";
+
 import Mamad from "../../../public/assets/img/mamad.jpg";
 
 export default function Speakers() {
   const speakers = [
     {
-      name: "Gaise baba",
-      role: "Gospel Artist & Creative",
+      name: "Emmanuel Samuel",
+      role: "HR Professional",
       img: gasieImg,
     },
 
@@ -25,14 +25,20 @@ export default function Speakers() {
       img: Mamad,
     },
     {
-      name: "Dr Foy",
-      role: "Media Mogul",
+      name: "Mr Oluwaseyi Adefemi",
+      role: "Founder, Drive45",
       img: foyImg,
     },
     {
       name: "Pastor Godswill Oyor",
       role: "Worship Minister & Financial Coach",
       img: godswillImg,
+    },
+
+    {
+      name: "Mr Oluwaseyi Adefemi",
+      role: "Founder, Drive45",
+      img: foyImg,
     },
     {
       name: "Jay Mikee",
@@ -44,11 +50,7 @@ export default function Speakers() {
      role: "Founder, VHA",
       img: Chineye,
     },
-    {
-      name: "Iyinoluwa Aboyeji",
-        role: "CEO, General Partner, Future Africa",
-      img: Iyinoluwa,
-    },
+    
     {
       name: "Jay Mikee",
       role: "Creative Director, Gospel Artist",
@@ -64,11 +66,14 @@ export default function Speakers() {
       role: "Founder, VHA",
       img: Chineye,
     },
-    {
-      name: "Iyinoluwa  Aboyeji",
-      role: "CEO, General Partner, Future Africa",
-      img: Iyinoluwa,
+    
+
+     {
+      name: "Emmanuel Samuel",
+      role: "HR Professional",
+      img: gasieImg,
     },
+    
     {
       name: "Pastor Darasimi Oyor",
       role: "Spoken Word Artist & Creative",

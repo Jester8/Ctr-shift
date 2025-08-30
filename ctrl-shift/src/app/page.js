@@ -12,6 +12,7 @@ import Speaker from "./components/Speaker";
 import WhyAttend from "./components/WhyAttend";
 import Footer from "./components/Footer";
 import Logo from "../../public/assets/img/logo (1).png";
+import Link from "next/link";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -56,7 +57,10 @@ export default function Home() {
 
   {/* Register Button */}
   <button className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-green-300 text-black font-bold shadow hover:shadow-lg hover:shadow-mint-300/50 transition">
-    Register
+   <Link href="https://lu.ma/e5dowowo" target="_blank" rel="noopener noreferrer">
+     Register   
+   </Link>
+  
   </button>
 
   {/* Mobile Menu Icon */}
