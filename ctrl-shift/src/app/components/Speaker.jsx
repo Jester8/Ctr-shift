@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import gasieImg from "../../../public/assets/img/Emmanuel.jpeg";
 import foyImg from "../../../public/assets/img/ade.jpeg";
 import godswillImg from "../../../public/assets/img/godswill.jpg";
-import jaymikeeImg from "../../../public/assets/img/jaymikee.jpg";
+import AbadiImg from "../../../public/assets/img/abadi.jpeg";
 import Chineye from "../../../public/assets/img/chinenye.jpg";
 
 import Mamad from "../../../public/assets/img/mamad.jpg";
@@ -41,20 +41,20 @@ export default function Speakers() {
       img: foyImg,
     },
     {
-      name: "Jay Mikee",
-      role: "Creative Director, Gospel Artist",
-      img: jaymikeeImg,
+      name: "Mr Emmanuel Abadi",
+      role: "Partnership Specialist, Moniepoint",
+      img: AbadiImg,
     },
     {
-      name: "Chineye Adeleye",
+      name: "Chinneye Adeleye",
      role: "Founder, VHA",
       img: Chineye,
     },
     
     {
-      name: "Jay Mikee",
-      role: "Creative Director, Gospel Artist",
-      img: jaymikeeImg,
+      name: "Mr Emmanuel Abadi",
+      role: "Partnership Specialist, Moniepoint",
+      img: AbadiImg,
     },
     {
       name: "Pastor Godswill Oyor",
@@ -62,7 +62,7 @@ export default function Speakers() {
       img: godswillImg,
     },
     {
-      name: "Chineye Adeleye",
+      name: "Chinenye Adeleye",
       role: "Founder, VHA",
       img: Chineye,
     },
