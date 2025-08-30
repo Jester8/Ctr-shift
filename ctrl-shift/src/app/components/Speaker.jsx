@@ -15,7 +15,7 @@ export default function Speakers() {
   const speakers = [
     {
       name: "Emmanuel Samuel",
-      role: "HR Professional",
+      role: "HR Professional, ",
       img: gasieImg,
     },
 
