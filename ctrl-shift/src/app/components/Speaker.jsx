@@ -8,6 +8,7 @@ import foyImg from "../../../public/assets/img/ade.jpeg";
 import godswillImg from "../../../public/assets/img/godswill.jpg";
 import AbadiImg from "../../../public/assets/img/abadi.jpeg";
 import Chineye from "../../../public/assets/img/chinenye.jpg";
+import Plaw from "../../../public/assets/img/plaw.jpg";
 
 import Mamad from "../../../public/assets/img/mamad.jpg";
 
@@ -46,9 +47,16 @@ export default function Speakers() {
       img: AbadiImg,
     },
     {
-      name: "Chinneye Adeleye",
+      name: "Chinenye Adeleye",
      role: "Founder, VHA",
       img: Chineye,
+    },
+
+    {
+      name: " Pastor Lawrence Oyor",
+      role: "Senior Pastor,  Davidic Generation Church",
+      img: Plaw,
+      
     },
     
     {
@@ -58,7 +66,7 @@ export default function Speakers() {
     },
     {
       name: "Pastor Godswill Oyor",
-      role: "Worship Minister & Financial Coach",
+      role: "Kingdomprenuer",
       img: godswillImg,
     },
     {
@@ -67,6 +75,13 @@ export default function Speakers() {
       img: Chineye,
     },
     
+
+      {
+      name: " Pastor Lawrence Oyor",
+      role: "Senior Pastor,  Davidic Generation Church",
+      img: Plaw,
+      
+    },
 
      {
       name: "Emmanuel Samuel",
